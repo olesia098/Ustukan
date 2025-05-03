@@ -1,1 +1,1 @@
-export const MENU_API = "http://localhost:8989/dishes"
+export const MENU_API = 'https://ustukan-server.onrender.com/dishes'
