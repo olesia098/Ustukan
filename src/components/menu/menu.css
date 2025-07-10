@@ -1,23 +1,23 @@
-.menu_main_container{
-    height: 100vh;
+.menu_main_container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .dish_main_container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2vw;
-    margin: 0;
-    height: 89vh;
-    overflow: auto;
-    /* background-color: rgba(179, 177, 177, 0.407); */
+  flex: 1;
+  column-count: 2;
+  column-gap: 2vw;
+  margin: 0;
+  overflow-y: auto;
 }
 
 .dish_container {
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 0; /* <-- маленький хак против зазора flex-wrap */
+  break-inside: avoid;
+  margin-bottom: 25px;
+  width: 100%;
+  margin-top: 0;
 }
-  
 
 .dish_title {
   display: grid;
@@ -25,6 +25,11 @@
   font-family: "Ondine";
   color: rgb(91, 44, 28);
   font-size: 3vh;
+}
+
+.dish_name{
+  font-size: 1.5vh;
+  font-family: "MulishBold";
 }
 
 .dish {
@@ -42,8 +47,4 @@
 
 .dish_title p:last-child {
   justify-self: center;
-}
-
-.video{
-    display: flex;
 }

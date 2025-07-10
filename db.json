@@ -229,7 +229,8 @@
       "name": "ВОСТОЧНЫЙ",
       "description": "говядина, картошка, морковка, брокколи, цветная капуста, фаршированный перец",
       "grams": "350",
-      "price": 285
+      "price": 285,
+      "video": "https://player.cloudinary.com/embed/?cloud_name=dx0z3ycxj&public_id=ko5muhfk2ayunnbjddam&profile=cld-looping"
     },
     {
       "id": 32,
@@ -318,7 +319,8 @@
       "name": "САЛАТ АРИСТОКРАТ",
       "description": "твороженый сыр, свекла, джем, руккола, кедровый орех",
       "grams": "270",
-      "price": 330
+      "price": 330,
+      "video": "https://player.cloudinary.com/embed/?cloud_name=dx0z3ycxj&public_id=xwvknhlwlenyajw8rozo&profile=cld-looping"
     },
     {
       "id": 44,

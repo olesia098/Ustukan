@@ -10,16 +10,15 @@ const MenuList = () => {
   const dispatch = useDispatch();
   const { dishes, loading } = useSelector((state) => state.dishes);
   // console.log(useSelector((state) => state.dishes));
-  const navigate = useNavigate()
-
+  const navigate = useNavigate();
   useEffect(() => {
     dispatch(getMenu());
-  }, [dispatch]);
+  }, []);
 
   return (
     <div className="menu_main_container">
-      <Navbar/>
-    <div className="dish_main_container conteiner">
+      <Navbar />
+      <div className="dish_main_container conteiner">
         {dishes.map((category) => (
           <div className="dish_container" key={category.category}>
             <div className="dish_title">
@@ -32,8 +31,15 @@ const MenuList = () => {
                 <div key={item.id}>
                   <div className="dish">
                     <div className="dish_container_about">
-                      <p onClick={() =>  navigate(`/dishes/${item.id}`)} className="dish_name">{item.name}</p>
-                      <p className="dish_description">{item.description}</p>
+                      <p
+                        onClick={() => navigate(`/dishes/${item.id}`)}
+                        className="dish_name"
+                      >
+                        {item.name}
+                      </p>
+                      {item.description ? (
+                        <p className="dish_description">{`(${(item.description)})`}</p>
+                      ) : null}
                     </div>
                     <div className="gram">
                       <p>{item.grams}</p>
@@ -47,7 +53,7 @@ const MenuList = () => {
             </div>
           </div>
         ))}
-    </div>
+      </div>
     </div>
   );
 };

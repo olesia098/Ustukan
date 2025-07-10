@@ -3,8 +3,9 @@ import { getMenu, getOneDishes } from "./menuActions"; // путь подста�
 
 const initialState = {
   dishes: [],
-  isLoading: false,
+  loading: false,
   error: null,
+  oneDishes: null,
 };
 
 const menuSlice = createSlice({
@@ -14,16 +15,16 @@ const menuSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getMenu.pending, (state) => {
-        state.isLoading = true;
+        state.loading = true;
         state.error = null;
       })
       .addCase(getMenu.fulfilled, (state, action) => {
-        state.isLoading = false;
+        state.loading = false;
         state.dishes = action.payload.data; // <-- твои данные
         // console.log(state.dishes);
       })
       .addCase(getMenu.rejected, (state, action) => {
-        state.isLoading = false;
+        state.loading = false;
         state.error = action.error.message;
       })
       .addCase(getOneDishes.pending, (state) => {
@@ -31,11 +32,12 @@ const menuSlice = createSlice({
       })
       .addCase(getOneDishes.fulfilled, (state, action) => {
         state.loading = false;
-        state.oneProduct = action.payload;
-        console.log(state.dishes)
+        state.oneDishes = action.payload;
+        console.log(state.oneDishes)
       })
-      .addCase(getOneDishes.rejected, (state) => {
-        state.loading = true;
+      .addCase(getOneDishes.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
       });
   },
 });

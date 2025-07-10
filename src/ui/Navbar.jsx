@@ -1,16 +1,20 @@
 import React from "react";
 import logo from "../img/logo.png";
 import "../index.css";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate()
+
   return (
     <div className="flex items-start justify-between conteiner">
       <div
-        className="text-[5vh]"
-        style={{ fontFamily: "Ondine", color: "rgb(91, 44, 28)", display: "flex" }}
+        className="text-[4vh]"
+        style={{ fontFamily: "Ondine", color: "rgb(82, 30, 6)", display: "flex" }}
       >
-        <p>Меню/</p>
-        <p>Домашнее меню</p>
+        <p onClick={()=> navigate(`/dishes/`)}>Меню</p>
+        <p>/</p>
+        <p onClick={()=> navigate(`/home_dishes/`)}>Домашнее меню</p>
       </div>
       <div>
         <img className="h-[10vh]" src={logo} alt="logo" />

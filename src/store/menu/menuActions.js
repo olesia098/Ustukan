@@ -13,10 +13,19 @@ export const getMenu = createAsyncThunk(
 );
 
 export const getOneDishes = createAsyncThunk(
-    "menu/getOneDishes",
-    async ({id}) => {
-        const {data} = await axios.get(`${MENU_API}/${id}`);
-        return data;
+  "menu/getOneDishes",
+  async ({ id }) => {
+    const { data } = await axios.get(MENU_API);
+    // ищем блюдо по id среди всех items
+    let foundDish = null;
+    for (const category of data) {
+      const match = category.items.find(item => item.id === Number(id));
+      if (match) {
+        foundDish = match;
+        break;
+      }
     }
-)
+    return foundDish;
+  }
+);
 

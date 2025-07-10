@@ -1,10 +1,11 @@
 import MenuDetailse from "./components/menu/MenuDetailse";
-import Main from "./components/menu/MenuList";
+import MenuList from "./components/menu/MenuList";
+import RoutesMenu from "./routes/RoutesMenu";
 
 function App() {
   return (
-    <div className="video">
-      <Main />
+    <div className="flex">
+      <MenuList />
       <MenuDetailse/>
     </div>
   );
