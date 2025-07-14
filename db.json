@@ -155,7 +155,7 @@
           "grams": "",
           "price": "270 54/1шт",
           "video": "",
-          "photo": []
+          "photo": ["https://ibb.co/wr2CDvjK", "https://ibb.co/ccHgBfny", "https://ibb.co/jcN4Pc9", "https://ibb.co/tP22gJqG"]
         },
         {
           "id": 17,
@@ -164,7 +164,7 @@
           "grams": "",
           "price": "270 54/1шт",
           "video": "",
-          "photo": []
+          "photo": ["https://ibb.co/8nqWv9NY", "https://ibb.co/Zzd0XQ1m", "https://ibb.co/1Y4fH3Yw"]
         },
         {
           "id": 18,
@@ -173,7 +173,7 @@
           "grams": "",
           "price": "270 54/1шт",
           "video": "",
-          "photo": []
+          "photo": ["https://ibb.co/8nqWv9NY", "https://ibb.co/Zzd0XQ1m", "https://ibb.co/1Y4fH3Yw"]
         },
         {
           "id": 19,
@@ -182,7 +182,7 @@
           "grams": "",
           "price": "325 65/1шт",
           "video": "",
-          "photo": []
+          "photo": ["https://ibb.co/8nqWv9NY", "https://ibb.co/Zzd0XQ1m", "https://ibb.co/1Y4fH3Yw"]
         },
         {
           "id": 20,
@@ -191,7 +191,7 @@
           "grams": "",
           "price": "335 67/1шт",
           "video": "",
-          "photo": []
+          "photo": ["https://ibb.co/8nqWv9NY", "https://ibb.co/Zzd0XQ1m", "https://ibb.co/1Y4fH3Yw"]
         },
         {
           "id": 21,
@@ -209,7 +209,7 @@
           "grams": "",
           "price": "370",
           "video": "",
-          "photo": []
+          "photo": ["https://ibb.co/TBCkWyCN"]
         },
         {
           "id": 23,
@@ -218,7 +218,7 @@
           "grams": "",
           "price": "380",
           "video": "",
-          "photo": []
+          "photo": ["https://ibb.co/3y9X7B8V"]
         },
         {
           "id": 30,
@@ -245,7 +245,7 @@
           "grams": "",
           "price": "360 (0.7) 455",
           "video": "",
-          "photo": []
+          "photo": ["https://ibb.co/4nnXxySB", "https://ibb.co/bR8r2MzQ", "https://ibb.co/Kcg1jSqK", "https://ibb.co/QvtDdBHH"]
         },
         {
           "id": 26,
@@ -254,7 +254,7 @@
           "grams": "",
           "price": "575",
           "video": "",
-          "photo": []
+          "photo": ["https://ibb.co/8gz9Hv7S"]
         },
         {
           "id": 27,
@@ -263,7 +263,7 @@
           "grams": "",
           "price": "650 (0.7) 875",
           "video": "",
-          "photo": []
+          "photo": ["https://ibb.co/Q3RtJ7Fr", "https://ibb.co/tpPwsG1d", "https://ibb.co/jvtVkTjs", "https://ibb.co/d4TVT4Cj"]
         },
         {
           "id": 28,
@@ -273,7 +273,7 @@
           "grams": "",
           "price": "650 (0.7) 875",
           "video": "",
-          "photo": []
+          "photo": ["https://ibb.co/KcwvvGsf", "https://ibb.co/pBtZyJhT", "https://ibb.co/mV1Kvz6t", "https://ibb.co/DfTbF7zR"]
         }
       ]
     },
@@ -350,7 +350,7 @@
           "grams": "",
           "price": "410",
           "video": "",
-          "photo": []
+          "photo": ["https://ibb.co/8nRng06S"]
         },
         {
           "id": 39,
@@ -553,7 +553,7 @@
           "name": "ГРИЛЬ - МЯСО & УГЛИ",
           "description": "Мясо с собственной, высокогорной фермы. Отборного качества, выращенное по международным стандартам SGS Certificate 24/00000012 ISO 22000:2018,ISO/TS22002-1:2009 и FSSC 22000 vers6. А также продукция имеет сертификат Халал No000345. Стейки имеют выраженный вкус молока. Благодаря высокогорью, разнотравью, на горной прозрачной воде, зерновой и кукурузной откормке животного. Рождается этот мясной шедевр, с незабываемым букетом вкусовых ощущений ваших рецепторов. Каждый вид стейка имеет свой уникальный, неповторимый вкус",
           "grams": "",
-          "price": null,
+          "price": "",
           "video": "",
           "photo": []
         },
@@ -564,7 +564,7 @@
           "grams": "250/700",
           "price": "1250",
           "video": "",
-          "photo": []
+          "photo": ["https://ibb.co/7dPdVJjp", "https://ibb.co/Zp9ybzMd", "https://ibb.co/TBs82LHt"]
         },
         {
           "id": 102,
@@ -609,7 +609,7 @@
           "grams": "",
           "price": "1350",
           "video": "",
-          "photo": []
+          "photo": ["https://ibb.co/SDqxtQ20", "https://ibb.co/SDqxtQ20"]
         },
         {
           "id": 107,
@@ -686,7 +686,7 @@
           "grams": "",
           "price": "690",
           "video": "",
-          "photo": []
+          "photo": ["https://ibb.co/8Dc3mMXC"]
         }
       ]
     },
