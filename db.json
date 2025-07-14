@@ -108,7 +108,7 @@
           "photo": []
         },
         {
-          "id":12,
+          "id": 12,
           "name": "СУП ВОСТОЧНЫЙ",
           "description": "Говяжий фарш фаршированный в перчик, фрикадельки, яйцо перепелки, цветная капуста, брокколи, лук репчатый, помидор черри, перец болгарский",
           "grams": "",
@@ -269,7 +269,7 @@
           "id": 28,
           "name": "ТАШ КОРДО МЯКОТЬ ЯГНЕНКА",
 
-"description": "Нежная мякоть барашка без кости. Рекомендуем кушать руками.",
+          "description": "Нежная мякоть барашка без кости. Рекомендуем кушать руками.",
           "grams": "",
           "price": "650 (0.7) 875",
           "video": "",
@@ -940,6 +940,676 @@
           "description": "Хрустящая куриная, сочная котлета, булочка кочевника, картофельные чипсы, лист свежего салата, помидор, соленый огурчик, секретный соус",
           "grams": "",
           "price": "500",
+          "video": "",
+          "photo": []
+        }
+      ]
+    }
+  ],
+  "drinks": [
+    {
+      "category": "Чай",
+      "items": [
+        {
+          "id": 500,
+          "name": "Ассам (черный)",
+          "description": "",
+          "grams": "1 л",
+          "price": "140",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 501,
+          "name": "Эрл Грей (бергамот)",
+          "description": "",
+          "grams": "1 л",
+          "price": "150",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 502,
+          "name": "Сенча (зеленый)",
+          "description": "",
+          "grams": "1 л",
+          "price": "160",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 503,
+          "name": "Жасмин",
+          "description": "",
+          "grams": "1 л",
+          "price": "160",
+          "video": "",
+          "photo": []
+        }
+      ]
+    },
+    {
+      "category": "Авторские чаи",
+      "items": [
+        {
+          "id": 504,
+          "name": "Облепиха-жасмин",
+          "description": "",
+          "grams": "1 л",
+          "price": "230",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 505,
+          "name": "Манго-личи",
+          "description": "",
+          "grams": "1 л",
+          "price": "290",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 506,
+          "name": "Малина-ромашка",
+          "description": "",
+          "grams": "1 л",
+          "price": "270",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 507,
+          "name": "Финиковый",
+          "description": "",
+          "grams": "1 л",
+          "price": "250",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 508,
+          "name": "Ягоды-шалфей",
+          "description": "",
+          "grams": "1 л",
+          "price": "270",
+          "video": "",
+          "photo": []
+        }
+      ]
+    },
+    {
+      "category": "Кофе",
+      "items": [
+        {
+          "id": 509,
+          "name": "Эспрессо",
+          "description": "",
+          "grams": "",
+          "price": "140",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 510,
+          "name": "Американо",
+          "description": "",
+          "grams": "",
+          "price": "160",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 511,
+          "name": "Капучино",
+          "description": "",
+          "grams": "",
+          "price": "230",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 512,
+          "name": "Флэт-Уайт",
+          "description": "",
+          "grams": "",
+          "price": "250",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 513,
+          "name": "Латте",
+          "description": "",
+          "grams": "",
+          "price": "250",
+          "video": "",
+          "photo": []
+        }
+      ]
+    },
+    {
+      "category": "Лимонады",
+      "items": [
+        {
+          "id": 514,
+          "name": "Груша-бузина",
+          "description": "",
+          "grams": "450/1 л",
+          "price": "230/460",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 515,
+          "name": "Яблоко-щавель",
+          "description": "",
+          "grams": "450/1 л",
+          "price": "230/460",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 516,
+          "name": "Клубника-маракуйя",
+          "description": "",
+          "grams": "450/1 л",
+          "price": "245/490",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 517,
+          "name": "Вишня-миндаль",
+          "description": "",
+          "grams": "450/1 л",
+          "price": "270/540",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 518,
+          "name": "Малина-личи",
+          "description": "",
+          "grams": "450/1 л",
+          "price": "270/540",
+          "video": "",
+          "photo": []
+        }
+      ]
+    },
+    {
+      "category": "Морс",
+      "items": [
+        {
+          "id": 519,
+          "name": "Клюква",
+          "description": "",
+          "grams": "1 л",
+          "price": "290",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 520,
+          "name": "Брусника",
+          "description": "",
+          "grams": "1 л",
+          "price": "290",
+          "video": "",
+          "photo": []
+        }
+      ]
+    },
+    {
+      "category": "Vstukan club",
+      "items": [
+        {
+          "id": 521,
+          "name": "Ак-Сереке Чалап",
+          "description": "",
+          "grams": "0.5 л",
+          "price": "130",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 522,
+          "name": "Бозо",
+          "description": "",
+          "grams": "0.5 л/1 л",
+          "price": "130/230",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 523,
+          "name": "Жарма",
+          "description": "",
+          "grams": "0.5 л/1 л",
+          "price": "130/230",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 524,
+          "name": "Чалап",
+          "description": "",
+          "grams": "0.5 л/1 л",
+          "price": "130/230",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 525,
+          "name": "Максым",
+          "description": "",
+          "grams": "0.5 л/1 л",
+          "price": "130/230",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 526,
+          "name": "Аралаш",
+          "description": "",
+          "grams": "0.5 л/1 л",
+          "price": "130/230",
+          "video": "",
+          "photo": []
+        }
+      ]
+    },
+    {
+      "category": "Холодные напитки",
+      "items": [
+        {
+          "id": 527,
+          "name": "Кока-Кола",
+          "description": "",
+          "grams": "330/1 л",
+          "price": "135/190",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 528,
+          "name": "Кока-Кола Zero",
+          "description": "",
+          "grams": "330/1 л",
+          "price": "135/190",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 529,
+          "name": "Спрайт",
+          "description": "",
+          "grams": "330/1 л",
+          "price": "135/155",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 530,
+          "name": "Фанта",
+          "description": "",
+          "grams": "330/1 л",
+          "price": "135/155",
+          "video": "",
+          "photo": []
+        }
+      ]
+    },
+    {
+      "category": "Вода",
+      "items": [
+        {
+          "id": 531,
+          "name": "Вода родниковая Vstukan",
+          "description": "подготовка горная",
+          "grams": "1 л",
+          "price": "100",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 532,
+          "name": "Легенда без газа",
+          "description": "",
+          "grams": "0.5 л",
+          "price": "150",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 533,
+          "name": "Легенда без газа",
+          "description": "",
+          "grams": "1 л",
+          "price": "250",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 534,
+          "name": "Ысык-Ата с газом",
+          "description": "",
+          "grams": "0.5 л",
+          "price": "150",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 535,
+          "name": "Джалал-Абад с газом",
+          "description": "",
+          "grams": "0.5 л",
+          "price": "150",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 536,
+          "name": "Арашан",
+          "description": "",
+          "grams": "0.5 л",
+          "price": "150",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 537,
+          "name": "Боржоми",
+          "description": "",
+          "grams": "0.5 л",
+          "price": "250",
+          "video": "",
+          "photo": []
+        }
+      ]
+    },
+    {
+      "category": "Соки",
+      "items": [
+        {
+          "id": 538,
+          "name": "Вишня/Ананас/Яблоко/Апельсин",
+          "description": "",
+          "grams": "1 л",
+          "price": "350",
+          "video": "",
+          "photo": []
+        }
+      ]
+    },
+    {
+      "category": "Свежие соки",
+      "items": [
+        {
+          "id": 539,
+          "name": "Морковный",
+          "description": "",
+          "grams": "250",
+          "price": "250",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 540,
+          "name": "Яблоко",
+          "description": "",
+          "grams": "250",
+          "price": "250",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 541,
+          "name": "Апельсин",
+          "description": "",
+          "grams": "250",
+          "price": "290",
+          "video": "",
+          "photo": []
+        }
+      ]
+    },
+    {
+      "category": "Топпинги к чаю",
+      "items": [
+        {
+          "id": 542,
+          "name": "Молоко",
+          "description": "",
+          "grams": "50 гр",
+          "price": "50",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 543,
+          "name": "Мята",
+          "description": "",
+          "grams": "10 гр",
+          "price": "50",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 544,
+          "name": "Мед",
+          "description": "",
+          "grams": "50 гр",
+          "price": "100",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 545,
+          "name": "Лимон",
+          "description": "",
+          "grams": "50 гр",
+          "price": "100",
+          "video": "",
+          "photo": []
+        }
+      ]
+    }
+  ],
+  "alcohol": [
+    {
+      "category": "Виски",
+      "items": [
+        {
+          "id": 1000,
+          "name": "BUSHMILLS",
+          "description": "",
+          "grams": "50",
+          "price": "350",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 1001,
+          "name": "CHIVAS 12",
+          "description": "",
+          "grams": "50",
+          "price": "590",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 1002,
+          "name": "JAMESON",
+          "description": "",
+          "grams": "50",
+          "price": "390",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 1003,
+          "name": "MONKEY SHOULDER",
+          "description": "",
+          "grams": "50",
+          "price": "650",
+          "video": "",
+          "photo": []
+        }
+      ]
+    },
+    {
+      "category": "Ром",
+      "items": [
+        {
+          "id": 1004,
+          "name": "CAPTAIN MORGAN",
+          "description": "",
+          "grams": "50",
+          "price": "290",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 1005,
+          "name": "BACARDI OAKHEART",
+          "description": "",
+          "grams": "50",
+          "price": "320",
+          "video": "",
+          "photo": []
+        }
+      ]
+    },
+    {
+      "category": "Водка",
+      "items": [
+        {
+          "id": 1006,
+          "name": "FINLANDIA",
+          "description": "",
+          "grams": "50",
+          "price": "260",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 1007,
+          "name": "ОРГАНИК",
+          "description": "",
+          "grams": "50",
+          "price": "160",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 1008,
+          "name": "НАСТРОЕНИЕ",
+          "description": "",
+          "grams": "50",
+          "price": "180",
+          "video": "",
+          "photo": []
+        }
+      ]
+    },
+    {
+      "category": "Текила",
+      "items": [
+        {
+          "id": 1009,
+          "name": "SIERRA SILVER",
+          "description": "",
+          "grams": "50",
+          "price": "290",
+          "video": "",
+          "photo": []
+        }
+      ]
+    },
+    {
+      "category": "Пиво",
+      "items": [
+        {
+          "id": 1010,
+          "name": "CORONA EXTRA",
+          "description": "",
+          "grams": "0.33",
+          "price": "330",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 1011,
+          "name": "HEINEKEN",
+          "description": "",
+          "grams": "0.33",
+          "price": "320",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 1012,
+          "name": "HOEGAARDEN",
+          "description": "",
+          "grams": "0.5",
+          "price": "320",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 1013,
+          "name": "BUD",
+          "description": "",
+          "grams": "0.5",
+          "price": "300",
+          "video": "",
+          "photo": []
+        }
+      ]
+    },
+    {
+      "category": "Джин",
+      "items": [
+        {
+          "id": 1014,
+          "name": "GORDONS",
+          "description": "",
+          "grams": "50",
+          "price": "290",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 1015,
+          "name": "GORDONS PINK",
+          "description": "",
+          "grams": "50",
+          "price": "300",
+          "video": "",
+          "photo": []
+        }
+      ]
+    },
+    {
+      "category": "Коньяк",
+      "items": [
+        {
+          "id": 1016,
+          "name": "КЫРГЫЗСТАН",
+          "description": "",
+          "grams": "50",
+          "price": "190",
+          "video": "",
+          "photo": []
+        },
+        {
+          "id": 1017,
+          "name": "БИШКЕК",
+          "description": "",
+          "grams": "50",
+          "price": "160",
           "video": "",
           "photo": []
         }
