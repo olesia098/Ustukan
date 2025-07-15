@@ -23,7 +23,7 @@ const MenuList = () => {
           <div className="dish_container" key={category.category}>
             <div className="dish_title">
               <h3>{category.category}</h3>
-              <p>гр</p>
+              {/* <p>гр</p> */}
               <p>цена</p>
             </div>
             <div>
@@ -41,9 +41,9 @@ const MenuList = () => {
                         <p className="dish_description">{`(${(item.description)})`}</p>
                       ) : null}
                     </div>
-                    <div className="gram">
+                    {/* <div className="gram">
                       <p>{item.grams}</p>
-                    </div>
+                    </div> */}
                     <div className="price">
                       <p>{item.price}</p>
                     </div>

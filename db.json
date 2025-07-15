@@ -169,7 +169,12 @@
           "grams": "",
           "price": "270 54/1шт",
           "video": "",
-          "photo": ["https://ibb.co/wr2CDvjK", "https://ibb.co/ccHgBfny", "https://ibb.co/jcN4Pc9", "https://ibb.co/tP22gJqG"]
+          "photo": [
+            "https://ibb.co/wr2CDvjK",
+            "https://ibb.co/ccHgBfny",
+            "https://ibb.co/jcN4Pc9",
+            "https://ibb.co/tP22gJqG"
+          ]
         },
         {
           "id": 17,
@@ -178,7 +183,11 @@
           "grams": "",
           "price": "270 54/1шт",
           "video": "",
-          "photo": ["https://ibb.co/8nqWv9NY", "https://ibb.co/Zzd0XQ1m", "https://ibb.co/1Y4fH3Yw"]
+          "photo": [
+            "https://ibb.co/8nqWv9NY",
+            "https://ibb.co/Zzd0XQ1m",
+            "https://ibb.co/1Y4fH3Yw"
+          ]
         },
         {
           "id": 18,
@@ -187,7 +196,11 @@
           "grams": "",
           "price": "270 54/1шт",
           "video": "",
-          "photo": ["https://ibb.co/8nqWv9NY", "https://ibb.co/Zzd0XQ1m", "https://ibb.co/1Y4fH3Yw"]
+          "photo": [
+            "https://ibb.co/8nqWv9NY",
+            "https://ibb.co/Zzd0XQ1m",
+            "https://ibb.co/1Y4fH3Yw"
+          ]
         },
         {
           "id": 19,
@@ -196,7 +209,11 @@
           "grams": "",
           "price": "325 65/1шт",
           "video": "",
-          "photo": ["https://ibb.co/8nqWv9NY", "https://ibb.co/Zzd0XQ1m", "https://ibb.co/1Y4fH3Yw"]
+          "photo": [
+            "https://ibb.co/8nqWv9NY",
+            "https://ibb.co/Zzd0XQ1m",
+            "https://ibb.co/1Y4fH3Yw"
+          ]
         },
         {
           "id": 20,
@@ -205,7 +222,11 @@
           "grams": "",
           "price": "335 67/1шт",
           "video": "",
-          "photo": ["https://ibb.co/8nqWv9NY", "https://ibb.co/Zzd0XQ1m", "https://ibb.co/1Y4fH3Yw"]
+          "photo": [
+            "https://ibb.co/8nqWv9NY",
+            "https://ibb.co/Zzd0XQ1m",
+            "https://ibb.co/1Y4fH3Yw"
+          ]
         },
         {
           "id": 21,
@@ -259,7 +280,12 @@
           "grams": "",
           "price": "360 (0.7) 455",
           "video": "",
-          "photo": ["https://ibb.co/4nnXxySB", "https://ibb.co/bR8r2MzQ", "https://ibb.co/Kcg1jSqK", "https://ibb.co/QvtDdBHH"]
+          "photo": [
+            "https://ibb.co/4nnXxySB",
+            "https://ibb.co/bR8r2MzQ",
+            "https://ibb.co/Kcg1jSqK",
+            "https://ibb.co/QvtDdBHH"
+          ]
         },
         {
           "id": 26,
@@ -277,7 +303,12 @@
           "grams": "",
           "price": "650 (0.7) 875",
           "video": "",
-          "photo": ["https://ibb.co/Q3RtJ7Fr", "https://ibb.co/tpPwsG1d", "https://ibb.co/jvtVkTjs", "https://ibb.co/d4TVT4Cj"]
+          "photo": [
+            "https://ibb.co/Q3RtJ7Fr",
+            "https://ibb.co/tpPwsG1d",
+            "https://ibb.co/jvtVkTjs",
+            "https://ibb.co/d4TVT4Cj"
+          ]
         },
         {
           "id": 28,
@@ -287,7 +318,12 @@
           "grams": "",
           "price": "650 (0.7) 875",
           "video": "",
-          "photo": ["https://ibb.co/KcwvvGsf", "https://ibb.co/pBtZyJhT", "https://ibb.co/mV1Kvz6t", "https://ibb.co/DfTbF7zR"]
+          "photo": [
+            "https://ibb.co/KcwvvGsf",
+            "https://ibb.co/pBtZyJhT",
+            "https://ibb.co/mV1Kvz6t",
+            "https://ibb.co/DfTbF7zR"
+          ]
         }
       ]
     },
@@ -536,7 +572,11 @@
           "grams": "",
           "price": "640",
           "video": "",
-          "photo": ["https://ibb.co/dYvsHjW", "https://ibb.co/DHr4fLhh", "https://ibb.co/Dfjtbk2B"]
+          "photo": [
+            "https://ibb.co/dYvsHjW",
+            "https://ibb.co/DHr4fLhh",
+            "https://ibb.co/Dfjtbk2B"
+          ]
         },
         {
           "id": 54,
@@ -605,7 +645,7 @@
           "grams": "250/700",
           "price": "1250",
           "video": "",
-          "photo": ["https://ibb.co/7dPdVJjp", "https://ibb.co/Zp9ybzMd", "https://ibb.co/TBs82LHt"]
+          "photo": "https://ibb.co/7dPdVJjp"
         },
         {
           "id": 102,
