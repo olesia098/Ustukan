@@ -14,7 +14,7 @@ const Navbar = () => {
       >
         <p onClick={()=> navigate(`/dishes/`)}>Меню</p>
         <p>/</p>
-        <p onClick={()=> navigate(`/home_dishes/`)}>Домашнее меню</p>
+        <p onClick={()=> navigate(`/drinks/`)}>Барное меню</p>
       </div>
       <div>
         <img className="h-[10vh]" src={logo} alt="logo" />
