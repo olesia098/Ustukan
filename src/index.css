@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: 'Mulish';
-  src: url('./assets/fonts/Mulish-Italic.ttf') format('truetype');
+  src: url('./assets/fonts/Mulish-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -48,3 +48,4 @@ body {
   padding-left: 3vh;
   padding-right: 3vh;
 }
+

@@ -1,16 +1,25 @@
-import { configureStore } from "@reduxjs/toolkit";
-import menuSlice from "./menu/menuSlice";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { menuSlice } from "./menu/menuSlice";
+import barSlice from "./bar/barSlice";
+import alcoholeSlice from "./alcohole/alcoSlice";
 
+const reducers = combineReducers({
+  dishes: menuSlice.reducer,
+  drinks: barSlice.reducer,
+  alcoholes: alcoholeSlice.reducer
+}); //на случай если много редюсеров в проекте
 
-export const store = configureStore({
+const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: false,
     }),
-  reducer: {
-    dishes: menuSlice,
+
+  reducer: reducers,
+
+  devTools: {
+    name: "",
   },
-  devTools:{
-    name:''
-  }
 });
+
+export default store;

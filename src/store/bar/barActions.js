@@ -2,29 +2,29 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { MENU_API } from "../../helpers/consts";
 import axios from "axios";
 
-export const getMenu = createAsyncThunk(
-  "menu/getMenu",
+export const getDrinks = createAsyncThunk(
+  "drinks/getDrinks",
   async (_, { getState }) => {
-    const { data } = await axios.get(`${MENU_API}/dishes`);
+    const { data } = await axios.get(`${MENU_API}/drinks`);
     return { data };
   }
 );
 
-export const getOneDishes = createAsyncThunk(
-  "menu/getOneDishes",
+export const getOneDrink = createAsyncThunk(
+  "drinks/getOneDrink",
   async ({ id }, thunkAPI) => {
     try {
-      const { data } = await axios.get(`${MENU_API}/dishes`);
+      const { data } = await axios.get(`${MENU_API}/drinks`);
       // ищем блюдо по id среди всех items
-      let foundDish = null;
+      let foundDrink = null;
       for (const category of data) {
         const match = category.items.find((item) => item.id === Number(id));
         if (match) {
-          foundDish = match;
+            foundDrink = match;
           break;
         }
       }
-      return foundDish;
+      return foundDrink;
     } catch (error) {
       // Если произошла ошибка, возвращаем отклоненное действие с ошибкой
       return thunkAPI.rejectWithValue(error.response.data);

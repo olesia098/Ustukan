@@ -1,12 +1,11 @@
-import MenuDetailse from "./components/menu/MenuDetailse";
-import MenuList from "./components/menu/MenuList";
 import RoutesMenu from "./routes/RoutesMenu";
+import Navbar from "./ui/Navbar";
 
 function App() {
   return (
-    <div className="flex">
-      <MenuList />
-      <MenuDetailse/>
+    <div className="flex flex-col">
+      <Navbar/>
+      <RoutesMenu/>
     </div>
   );
 }

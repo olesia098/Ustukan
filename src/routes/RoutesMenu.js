@@ -1,13 +1,15 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import MenuList from '../components/menu/MenuList';
-import App from '../App';
+import DetailPage from '../pages/DetailPage';
+import BarPage from '../pages/BarPage';
+import MenuPage from '../pages/MenuPage';
 
 const RoutesHomeMenu = () => {
     return (
         <Routes>
-            <Route path="/dishes/" element={<MenuList/>} />
-            <Route path="/dishes/:id" element={<App />} />
+            <Route path="/dishes/" element={<MenuPage/>} />
+            <Route path="/dishes/:id" element={<DetailPage />} />
+            <Route path="/drinks/" element={<BarPage/>} />
         </Routes>
     );
 };
