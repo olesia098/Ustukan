@@ -9,8 +9,17 @@ const MenuItems = ({ category, items }) => {
     <div className="dish_container">
       <div className="dish_title">
         <h3>{category}</h3>
-        <p>цена</p>
+
+        {/* Заголовки для колонок (2 столбца) */}
+        <div className="dish_header_columns">
+          {category === "Топпинги к чаю"
+            ? location.pathname === "/drinks/" && <p>гр</p>
+            : location.pathname === "/drinks/" && <p>мл</p>}
+          {/* {location.pathname === "/drinks/" && <p>мл</p>} */}
+          <p>цена</p>
+        </div>
       </div>
+
       <div>
         {items.map((item) => (
           <div key={item.id} className="dish">
@@ -22,11 +31,12 @@ const MenuItems = ({ category, items }) => {
               }
             >
               <p className="dish_name">{item.name}</p>
-              {item.description ? (
+              {item.description && (
                 <p className="dish_description">({item.description})</p>
-              ) : null}
+              )}
             </div>
-            <div className="price">
+            <div className="price_columns">
+              {location.pathname === "/drinks/" && <p>{item.grams}</p>}
               <p>{item.price}</p>
             </div>
           </div>
