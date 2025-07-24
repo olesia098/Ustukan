@@ -1160,7 +1160,7 @@
           "id": 509,
           "name": "Эспрессо",
           "description": "",
-          "grams": "",
+          "grams": "450",
           "price": "140",
           "video": "",
           "photo": []
@@ -1169,7 +1169,7 @@
           "id": 510,
           "name": "Американо",
           "description": "",
-          "grams": "",
+          "grams": "250",
           "price": "160",
           "video": "",
           "photo": []
@@ -1178,7 +1178,7 @@
           "id": 511,
           "name": "Капучино",
           "description": "",
-          "grams": "",
+          "grams": "220",
           "price": "230",
           "video": "",
           "photo": []
@@ -1187,7 +1187,7 @@
           "id": 512,
           "name": "Флэт-Уайт",
           "description": "",
-          "grams": "",
+          "grams": "220",
           "price": "250",
           "video": "",
           "photo": []
@@ -1196,7 +1196,7 @@
           "id": 513,
           "name": "Латте",
           "description": "",
-          "grams": "",
+          "grams": "300",
           "price": "250",
           "video": "",
           "photo": []

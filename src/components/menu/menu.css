@@ -48,3 +48,18 @@
 .dish_title p:last-child {
   justify-self: center;
 }
+
+.dish_header_columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-family: "MulishBold";
+  justify-items: center;
+}
+
+.price_columns {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: 80px 50px;
+  justify-items: center;
+  font-family: "MulishBold";
+}
