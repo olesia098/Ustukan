@@ -1,3 +1,3 @@
-// export const MENU_API = 'https://ustukan-server.onrender.com/dishes'
+export const MENU_API = 'https://ustukan-server.onrender.com'
 
-export const MENU_API = "http://localhost:8989";
+// export const MENU_API = "https://ustukan-server-f4t8-git-main-olesyas-projects-bad617cb.vercel.app/"
