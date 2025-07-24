@@ -650,11 +650,15 @@
           "grams": "250/700",
           "price": "1250",
           "video": "",
+<<<<<<< HEAD
+          "photo": "https://ibb.co/7dPdVJjp"
+=======
           "photo": [
             "https://i.ibb.co/9kPRdHrn/DSC06381.jpg",
             "https://i.ibb.co/VWsS9mvT/DSC06444.jpg",
             "https://i.ibb.co/JwVw2Rmp/DSC06384.jpg"
           ]
+>>>>>>> f4d5d6ad83924201e199e3cd2187be856bbcb624
         },
         {
           "id": 102,
