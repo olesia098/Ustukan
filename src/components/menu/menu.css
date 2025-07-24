@@ -21,7 +21,7 @@
 
 .dish_title {
   display: grid;
-  grid-template-columns: 7fr 1fr 1fr;
+  grid-template-columns: 7fr 2fr;
   font-family: "Ondine";
   color: rgb(91, 44, 28);
   font-size: 3vh;
@@ -34,8 +34,8 @@
 
 .dish {
   display: grid;
-  grid-template-columns: 7fr 1fr 1fr;
-  grid-auto-rows: 4vw;
+  grid-template-columns: 7fr 2fr;
+  /* grid-auto-rows: 4vw; */
   font-size: 1.5vh;
   font-family: "Mulish";
 }
@@ -47,4 +47,19 @@
 
 .dish_title p:last-child {
   justify-self: center;
+}
+
+.dish_header_columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-family: "MulishBold";
+  justify-items: center;
+}
+
+.price_columns {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: 80px 50px;
+  justify-items: center;
+  font-family: "MulishBold";
 }

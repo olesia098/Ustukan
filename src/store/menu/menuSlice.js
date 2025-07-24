@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getMenu, getOneDishes } from "./menuActions"; // путь подставь свой
+import { getMenu, getOneDishes } from "./menuActions"; 
 
 const initialState = {
   dishes: [],
@@ -8,7 +8,7 @@ const initialState = {
   oneDishes: null,
 };
 
-const menuSlice = createSlice({
+export const menuSlice = createSlice({
   name: "dishes",
   initialState,
   reducers: {},
@@ -42,4 +42,4 @@ const menuSlice = createSlice({
   },
 });
 
-export default menuSlice.reducer;
+export default menuSlice;
