@@ -11,11 +11,16 @@ const MenuItems = ({ category, items }) => {
         <h3>{category}</h3>
 
         {/* Заголовки для колонок (2 столбца) */}
-        <div className="dish_header_columns">
+        <div
+          className={
+            location.pathname === "/drinks/"
+              ? "dish_header_columns"
+              : "dish_header_columns2"
+          }
+        >
           {category === "Топпинги к чаю"
             ? location.pathname === "/drinks/" && <p>гр</p>
             : location.pathname === "/drinks/" && <p>мл</p>}
-          {/* {location.pathname === "/drinks/" && <p>мл</p>} */}
           <p>цена</p>
         </div>
       </div>
@@ -35,8 +40,14 @@ const MenuItems = ({ category, items }) => {
                 <p className="dish_description">({item.description})</p>
               )}
             </div>
-            <div className="price_columns">
-              {location.pathname === "/drinks/" && <p>{item.grams}</p>}
+            <div
+              className={
+                location.pathname === "/drinks/"
+                  ? "price_columns"
+                  : "price_columns2"
+              }
+            >
+              {location.pathname === "/drinks/" ? <p>{item.grams}</p> : ""}
               <p>{item.price}</p>
             </div>
           </div>

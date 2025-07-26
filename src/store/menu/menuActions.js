@@ -31,3 +31,37 @@ export const getOneDishes = createAsyncThunk(
     }
   }
 );
+
+export const addNewDish = createAsyncThunk(
+  "menu/addNewDish",
+  async ({ category, newDish }, thunkAPI) => {
+    try {
+      // 1. Получаем все категории
+      const { data: dishes } = await axios.get(`${MENU_API}/dishes`);
+
+      // 2. Ищем нужную категорию
+      const categoryObj = dishes.find((cat) => cat.category === category);
+      if (!categoryObj) {
+        throw new Error("Категория не найдена");
+      }
+
+      // 3. Добавляем id для нового блюда
+      const newId =
+        categoryObj.items.length > 0
+          ? Math.max(...categoryObj.items.map((i) => i.id)) + 1
+          : 1;
+
+      const updatedItems = [...categoryObj.items, { id: newId, ...newDish }];
+
+      // 4. Обновляем эту категорию на сервере
+      await axios.put(`${MENU_API}/dishes/${categoryObj.id}`, {
+        items: updatedItems,
+      });
+
+      // 5. Возвращаем обновленные данные
+      return { category: categoryObj.category, items: updatedItems };
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);

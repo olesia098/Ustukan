@@ -1,5 +1,4 @@
 .menu_main_container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -7,7 +6,7 @@
 .dish_main_container {
   flex: 1;
   column-count: 2;
-  column-gap: 2vw;
+  column-gap: 58.4px;
   margin: 0;
   overflow-y: auto;
 }
@@ -20,22 +19,21 @@
 }
 
 .dish_title {
-  display: grid;
-  grid-template-columns: 7fr 2fr;
+  display: flex;
+  justify-content: space-between;
   font-family: "Ondine";
   color: rgb(91, 44, 28);
   font-size: 3vh;
 }
 
-.dish_name{
+.dish_name {
   font-size: 1.5vh;
   font-family: "MulishBold";
 }
 
 .dish {
   display: grid;
-  grid-template-columns: 7fr 2fr;
-  /* grid-auto-rows: 4vw; */
+  grid-template-columns: 7fr 1fr;
   font-size: 1.5vh;
   font-family: "Mulish";
 }
@@ -45,21 +43,57 @@
   justify-self: center;
 }
 
-.dish_title p:last-child {
-  justify-self: center;
-}
-
 .dish_header_columns {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: space-between;
+  width: 5.3rem;
   font-family: "MulishBold";
   justify-items: center;
+}
+
+.dish_header_columns2 {
+  font-family: "MulishBold";
 }
 
 .price_columns {
   display: grid;
-  /* grid-template-columns: repeat(2, 1fr); */
-  grid-template-columns: 80px 50px;
+  grid-template-columns: 50px 50px;
   justify-items: center;
   font-family: "MulishBold";
+}
+
+.price_columns2{
+  display: grid;
+  grid-template-columns: 80px 0px;
+  justify-items: end;
+  font-family: "MulishBold";
+}
+
+.price_columns2 p{
+ padding-right: 8px;
+}
+
+@media (max-width: 1100px) {
+  .dish_header_columns {
+    font-size: 2.3vh;
+    width: 5.2rem;
+  }
+
+  .dish_header_columns2 {
+    font-size: 2.3vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .dish_main_container {
+    column-count: 1;
+  }
+
+  .dish_header_columns2 {
+    padding-right: 0px;
+  }
+
+  .price_columns2 {
+    grid-template-columns: 80px 0px;
+  }
 }
