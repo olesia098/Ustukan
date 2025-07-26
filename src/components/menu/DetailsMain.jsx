@@ -47,18 +47,18 @@ const DetailsMain = ({ id }) => {
     );
 
   const ImageWrapper = ({ src }) => (
-    <div className="w-full overflow-hidden">
+    // <div className="w-full overflow-hidden">
       <img
-        className="w-full h-[500px] sm:h-[700px] object-cover border-none "
+        className="w-full h-[700px] sm:h-[700px] object-cover border-none "
         src={src}
         alt="product"
       />
-    </div>
+    // </div> 
   );
 
   const ImageWrapper2 = ({ src, onClick }) => (
     <div
-      className="h-[180px] sm:h-[220px] max-w-[110px] sm:max-w-[150px] overflow-hidden pb-2 cursor-pointer w-full"
+      className="w-[200px] sm:w-[300px] pb-2 cursor-pointer"
       onClick={onClick}
     >
       <img
@@ -75,8 +75,8 @@ const DetailsMain = ({ id }) => {
         className="m-4 mt-0 cursor-pointer"
         onClick={() => navigate(-1)}
       />
-      <div className="h-[500px] sm:h-[700px] flex gap-1">
-        <div className="absolute top-36 w-1/3">
+      <div className="h-full w-full flex flex-col gap-1">
+        <div className="absolute top-36 sm:top-44 w-2/5">
           <Accordion
             defaultExpanded
             style={{
@@ -105,9 +105,9 @@ const DetailsMain = ({ id }) => {
 
         <ImageWrapper src={activeImage ? activeImage : gray} />
 
-        <div className="img-carousel h-full overflow-y-scroll">
+        <div className="img-carousel w-full flex flex-row overflow-x-scroll space-x-2">
           {oneDishes?.photo?.map((item, key) => {
-            const imageSrc = item ? item : gray; // если item нет, то серое изображение
+            const imageSrc = item || gray;
             return (
               <ImageWrapper2
                 key={key}
@@ -117,6 +117,7 @@ const DetailsMain = ({ id }) => {
             );
           })}
         </div>
+
       </div>
     </div>
   );

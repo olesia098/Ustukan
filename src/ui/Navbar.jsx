@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div className="flex items-start justify-between conteiner">
       <div
-        className="text-[4vh]"
+        className="text-[3vh] sm:text-[4vh]"
         style={{ fontFamily: "Ondine", color: "rgb(82, 30, 6)", display: "flex" }}
       >
         <p onClick={()=> navigate(`/dishes/`)}>Меню</p>
@@ -17,7 +17,7 @@ const Navbar = () => {
         <p onClick={()=> navigate(`/drinks/`)}>Барное меню</p>
       </div>
       <div>
-        <img className="h-[10vh]" src={logo} alt="logo" />
+        <img className="h-[6vh] sm:h-[10vh]" src={logo} alt="logo" />
       </div>
     </div>
   );
