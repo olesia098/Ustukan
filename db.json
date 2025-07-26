@@ -241,7 +241,9 @@
           "grams": "",
           "price": "",
           "video": "",
-          "photo": ["https://i.ibb.co/wNFHRMb8/DSC06279.jpg"]
+          "photo": [
+            "https://i.ibb.co/wNFHRMb8/DSC06279.jpg"
+          ]
         },
         {
           "id": 22,
@@ -250,7 +252,9 @@
           "grams": "",
           "price": "370",
           "video": "",
-          "photo": ["https://i.ibb.co/SXLPfSLZ/DSC06254.jpg"]
+          "photo": [
+            "https://i.ibb.co/SXLPfSLZ/DSC06254.jpg"
+          ]
         },
         {
           "id": 23,
@@ -259,7 +263,9 @@
           "grams": "",
           "price": "380",
           "video": "",
-          "photo": ["https://i.ibb.co/wNFHRMb8/DSC06279.jpg"]
+          "photo": [
+            "https://i.ibb.co/wNFHRMb8/DSC06279.jpg"
+          ]
         },
         {
           "id": 30,
@@ -300,7 +306,9 @@
           "grams": "",
           "price": "575",
           "video": "",
-          "photo": ["https://i.ibb.co/SwQBzY39/DSC06320.jpg"]
+          "photo": [
+            "https://i.ibb.co/SwQBzY39/DSC06320.jpg"
+          ]
         },
         {
           "id": 27,
@@ -319,7 +327,6 @@
         {
           "id": 28,
           "name": "ТАШ КОРДО МЯКОТЬ ЯГНЕНКА",
-
           "description": "Нежная мякоть барашка без кости. Рекомендуем кушать руками.",
           "grams": "",
           "price": "650 (0.7) 875",
@@ -369,7 +376,9 @@
           "grams": "",
           "price": "260",
           "video": "",
-          "photo": ["https://i.ibb.co/MyVdHXZQ/DSC06164.jpg"]
+          "photo": [
+            "https://i.ibb.co/MyVdHXZQ/DSC06164.jpg"
+          ]
         },
         {
           "id": 35,
@@ -378,7 +387,9 @@
           "grams": "",
           "price": "320",
           "video": "",
-          "photo": ["https://i.ibb.co/4Z01pHGg/DSC06197.jpg"]
+          "photo": [
+            "https://i.ibb.co/4Z01pHGg/DSC06197.jpg"
+          ]
         },
         {
           "id": 36,
@@ -405,7 +416,9 @@
           "grams": "",
           "price": "410",
           "video": "",
-          "photo": ["https://i.ibb.co/vCrC4HZK/DSC06227.jpg"]
+          "photo": [
+            "https://i.ibb.co/vCrC4HZK/DSC06227.jpg"
+          ]
         },
         {
           "id": 39,
@@ -699,7 +712,9 @@
           "grams": "",
           "price": "1350",
           "video": "",
-          "photo": ["https://i.ibb.co/9mRvbwJ2/DSC06468.jpg"]
+          "photo": [
+            "https://i.ibb.co/9mRvbwJ2/DSC06468.jpg"
+          ]
         },
         {
           "id": 107,
@@ -776,7 +791,9 @@
           "grams": "",
           "price": "690",
           "video": "",
-          "photo": ["https://i.ibb.co/Y7Z9N2bC/DSC06345.jpg"]
+          "photo": [
+            "https://i.ibb.co/Y7Z9N2bC/DSC06345.jpg"
+          ]
         }
       ]
     },
@@ -930,7 +947,10 @@
           "grams": "",
           "price": "110",
           "video": "",
-          "photo": ["https://i.ibb.co/Pd93Ddw/DSC05838.jpg", "https://i.ibb.co/NPcywj5/DSC05847.jpg"]
+          "photo": [
+            "https://i.ibb.co/Pd93Ddw/DSC05838.jpg",
+            "https://i.ibb.co/NPcywj5/DSC05847.jpg"
+          ]
         },
         {
           "id": 129,
@@ -993,7 +1013,9 @@
           "grams": "",
           "price": "240",
           "video": "",
-          "photo": ["https://i.ibb.co/zTxwq98B/DSC06130.jpg"]
+          "photo": [
+            "https://i.ibb.co/zTxwq98B/DSC06130.jpg"
+          ]
         },
         {
           "id": 134,
