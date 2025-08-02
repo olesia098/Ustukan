@@ -12,21 +12,25 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useNavigate } from "react-router-dom";
 
 const DetailsMain = ({ id }) => {
-  const [isLoading, setIsLoading] = useState(true);
   const [activeImage, setActiveImage] = useState(null);
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
-  const { dishes, loading, oneDishes } = useSelector((state) => state.dishes);
+  const { loading, oneDishes } = useSelector((state) => state.dishes);
 
   useEffect(() => {
     dispatch(getOneDishes({ id })); // не забывай, getOneDishes принимает объект { id }
-    console.log(oneDishes);
-  }, [id]);
+  }, [id, dispatch]);
 
   useEffect(() => {
-    if (oneDishes?.photo?.length) {
+    console.log(oneDishes);
+  }, [oneDishes]);
+
+  useEffect(() => {
+    if (oneDishes?.photo && oneDishes.photo.length > 0) {
       setActiveImage(oneDishes.photo[0]);
+    } else {
+      setActiveImage(gray);
     }
   }, [oneDishes]);
 
@@ -39,21 +43,38 @@ const DetailsMain = ({ id }) => {
   //     }
   //   }, [isLoading, oneProduct]);
 
-  if (loading || !oneDishes)
+  if (loading) {
     return (
       <div className="h-800 flex justify-center items-center">
         <Loading />
       </div>
     );
+  }
+
+  if (!oneDishes) {
+    return (
+      <div className="h-800 flex justify-center items-center">
+        <div className="text-center">
+          <p className="text-xl mb-4">Блюдо не найдено</p>
+          <button
+            onClick={() => navigate(-1)}
+            className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700"
+          >
+            Вернуться назад
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   const ImageWrapper = ({ src }) => (
     // <div className="w-full overflow-hidden">
-      <img
-        className="w-full h-[700px] sm:h-[700px] object-cover border-none "
-        src={src}
-        alt="product"
-      />
-    // </div> 
+    <img
+      className="w-full h-[700px] sm:h-[700px] object-cover border-none "
+      src={src}
+      alt="product"
+    />
+    // </div>
   );
 
   const ImageWrapper2 = ({ src, onClick }) => (
@@ -72,7 +93,7 @@ const DetailsMain = ({ id }) => {
   return (
     <div>
       <ArrowBackIcon
-        className="m-4 mt-0 cursor-pointer"
+        className="mb-2 ml-4 cursor-pointer"
         onClick={() => navigate(-1)}
       />
       <div className="h-full w-full flex flex-col gap-1">
@@ -106,18 +127,23 @@ const DetailsMain = ({ id }) => {
         <ImageWrapper src={activeImage ? activeImage : gray} />
 
         <div className="img-carousel w-full flex flex-row overflow-x-scroll space-x-2">
-          {oneDishes?.photo?.map((item, key) => {
-            const imageSrc = item || gray;
-            return (
-              <ImageWrapper2
-                key={key}
-                src={imageSrc}
-                onClick={() => setActiveImage(imageSrc)}
-              />
-            );
-          })}
+          {oneDishes?.photo && oneDishes.photo.length > 0 ? (
+            oneDishes.photo.map((item, key) => {
+              const imageSrc = item || gray;
+              return (
+                <ImageWrapper2
+                  key={key}
+                  src={imageSrc}
+                  onClick={() => setActiveImage(imageSrc)}
+                />
+              );
+            })
+          ) : (
+            <div className="flex items-center justify-center w-full py-8">
+              <p className="text-gray-500">Фотографии отсутствуют</p>
+            </div>
+          )}
         </div>
-
       </div>
     </div>
   );

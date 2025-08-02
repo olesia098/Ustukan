@@ -7,18 +7,39 @@ import {
   InputLabel,
   FormControl,
   Box,
-  Typography,
 } from "@mui/material";
-import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { addNewDish } from "../../store/menu/menuActions";
+import { addNewDish, getMenu } from "../../store/menu/menuActions";
+import CloudUploadGroup from "../cloudinary/CloudUploadGroup";
+import { useCloudinary } from "../cloudinary/useCloudinary";
+// import CloudinaryTest from "../cloudinary/CloudinaryTest";
 
 const DishesForm = () => {
   const dispatch = useDispatch();
-  const { dishes, loading } = useSelector((state) => state.dishes);
+  const { dishes } = useSelector((state) => state.dishes);
+  const [cat, setCat] = useState("");
+
+  useEffect(() => {
+    dispatch(getMenu());
+  }, [dispatch]);
+
+  // Отладочная информация для проверки переменных окружения
+  useEffect(() => {
+    console.log("=== ПРОВЕРКА ПЕРЕМЕННЫХ ОКРУЖЕНИЯ ===");
+    console.log(
+      "REACT_APP_CLOUDINARY_CLOUD_NAME:",
+      process.env.REACT_APP_CLOUDINARY_CLOUD_NAME
+    );
+    console.log(
+      "REACT_APP_CLOUDINARY_UPLOAD_PRESET:",
+      process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET
+    );
+    console.log("NODE_ENV:", process.env.NODE_ENV);
+    console.log("=====================================");
+  }, []);
 
   const [form, setForm] = useState({
-    category: "",
+    id: 0,
     name: "",
     description: "",
     grams: "",
@@ -27,39 +48,71 @@ const DishesForm = () => {
     photo: [],
   });
 
+  const {
+    uploading,
+    uploadProgress,
+    handleVideoUpload: cloudinaryVideoUpload,
+    handlePhotoUpload: cloudinaryPhotoUpload,
+  } = useCloudinary();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+
+    setForm((prev) => ({
+      ...prev,
+      id: Math.floor(Math.random() * 1000000), // ✅ генерируем новый id каждый раз
+      [name]: value,
+    }));
   };
 
-  const handlePhotoUpload = (e) => {
-    const files = Array.from(e.target.files);
-    // предполагается, что ты загружаешь фото на https://ibb.co и получаешь ссылки
-    // можно сюда вставить upload-хук, если он есть
-    const urls = files.map((file) => URL.createObjectURL(file)); // временно
-    setForm((prev) => ({ ...prev, photo: [...prev.photo, ...urls] }));
+  // Обработчики для Cloudinary с обновлением состояния формы
+  const handleVideoUpload = async (e) => {
+    try {
+      const videoUrl = await cloudinaryVideoUpload(e);
+      setForm((prev) => ({ ...prev, video: videoUrl }));
+      alert("Видео успешно загружено!");
+    } catch (error) {
+      alert("Ошибка при загрузке видео: " + error.message);
+    }
   };
 
-  const handleSubmit = async (e) => {
+  const handlePhotoUpload = async (e) => {
+    try {
+      const photoUrls = await cloudinaryPhotoUpload(e);
+      setForm((prev) => ({ ...prev, photo: [...prev.photo, ...photoUrls] }));
+      alert("Фото успешно загружены!");
+    } catch (error) {
+      alert("Ошибка при загрузке фото: " + error.message);
+    }
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-        dispatch(addNewDish({ category: form.category, newDish: form }));
-
-      alert("Блюдо добавлено!");
-      setForm({
-        category: "",
-        name: "",
-        description: "",
-        grams: "",
-        price: "",
-        video: "",
-        photo: [],
+    dispatch(
+      addNewDish({
+        category: cat,
+        newDish: form,
+      })
+    );
+    dispatch(getMenu())
+      .unwrap()
+      .then(() => {
+        alert("Блюдо добавлено!");
+        setForm({
+          id: 0,
+          name: "",
+          description: "",
+          grams: "",
+          price: "",
+          video: "",
+          photo: [],
+        });
+        setCat("");
+      })
+      .catch((error) => {
+        alert("Ошибка при добавлении блюда: " + error);
       });
-    } catch (err) {
-      console.error(err);
-      alert("Ошибка при добавлении блюда.");
-    }
   };
 
   return (
@@ -68,25 +121,25 @@ const DishesForm = () => {
       onSubmit={handleSubmit}
       sx={{ maxWidth: 500, m: "auto" }}
     >
-      <Typography variant="h5" mb={2}>
-        Добавить блюдо
-      </Typography>
-
       <FormControl fullWidth margin="normal">
         <InputLabel id="category-label">Категория</InputLabel>
         <Select
           labelId="category-label"
-          value={form.category}
           name="category"
           label="Категория"
-          onChange={handleChange}
+          value={cat} // ✅ теперь управляем только этим состоянием
+          onChange={(e) => {
+            setCat(e.target.value);
+            // console.log(e.target.value);
+          }} // ✅ обновляем category
           required
         >
-          {dishes.map((cat) => (
-            <MenuItem key={cat.id} value={cat.category}>
-              {cat.category}
-            </MenuItem>
-          ))}
+          {Array.isArray(dishes) &&
+            dishes.map((cat) => (
+              <MenuItem key={cat.id} value={cat.category}>
+                {cat.category}
+              </MenuItem>
+            ))}
         </Select>
       </FormControl>
 
@@ -124,32 +177,31 @@ const DishesForm = () => {
         margin="normal"
         required
       />
-      <TextField
-        fullWidth
-        label="Ссылка на видео"
-        name="video"
-        value={form.video}
-        onChange={handleChange}
-        margin="normal"
+
+      {/* Компонент загрузки медиафайлов */}
+      <CloudUploadGroup
+        onVideoUpload={handleVideoUpload}
+        onPhotoUpload={handlePhotoUpload}
+        videoUrl={form.video}
+        photoUrls={form.photo}
+        uploading={uploading}
+        uploadProgress={uploadProgress}
+        showVideo={true}
+        showPhoto={true}
+        showDeleteButtons={false}
       />
-
-      <Button variant="contained" component="label" sx={{ mt: 2 }}>
-        Загрузить фото
-        <input type="file" hidden multiple onChange={handlePhotoUpload} />
-      </Button>
-
-      {form.photo.length > 0 && (
-        <Box mt={2}>
-          <Typography>Загружено: {form.photo.length} фото</Typography>
-        </Box>
-      )}
 
       <Button
         type="submit"
         variant="contained"
-        color="primary"
         fullWidth
-        sx={{ mt: 3 }}
+        sx={{
+          mt: 3,
+          backgroundColor: "#5b2c1c",
+          "&:hover": {
+            backgroundColor: "#4a2417",
+          },
+        }}
       >
         Добавить блюдо
       </Button>

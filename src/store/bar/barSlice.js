@@ -1,8 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getDrinks, getOneDrink } from "./barActions";
+import {
+  getDrinks,
+  getOneDrink,
+  addNewDrink,
+  deleteDrink,
+  updateDrink,
+} from "./barActions";
 
 const initialState = {
-    drinks: [],
+  drinks: [],
   loading: false,
   error: null,
   oneDrink: null,
@@ -20,8 +26,8 @@ export const barSlice = createSlice({
       })
       .addCase(getDrinks.fulfilled, (state, action) => {
         state.loading = false;
-        state.drinks = action.payload.data; // <-- твои данные
-        // console.log(state.dishes);
+        state.drinks = action.payload; // <-- твои данные
+        // console.log(state.drinks);
       })
       .addCase(getDrinks.rejected, (state, action) => {
         state.loading = false;
@@ -33,11 +39,47 @@ export const barSlice = createSlice({
       .addCase(getOneDrink.fulfilled, (state, action) => {
         state.loading = false;
         state.oneDrink = action.payload;
-        console.log(state.oneDrink)
+        console.log(state.oneDrink);
       })
       .addCase(getOneDrink.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
+      })
+      .addCase(addNewDrink.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(addNewDrink.fulfilled, (state, action) => {
+        state.loading = false;
+        state.drinks = action.payload;
+      })
+      .addCase(addNewDrink.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+      })
+      .addCase(deleteDrink.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(deleteDrink.fulfilled, (state, action) => {
+        state.loading = false;
+        state.drinks = action.payload;
+      })
+      .addCase(deleteDrink.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || action.error.message;
+      })
+      .addCase(updateDrink.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(updateDrink.fulfilled, (state, action) => {
+        state.loading = false;
+        state.drinks = action.payload;
+      })
+      .addCase(updateDrink.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || action.error.message;
       });
   },
 });

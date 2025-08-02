@@ -33,9 +33,17 @@
 
 .dish {
   display: grid;
-  grid-template-columns: 7fr 1fr;
+  grid-template-columns: 7fr 1fr auto;
   font-size: 1.5vh;
   font-family: "Mulish";
+  align-items: center;
+  gap: 10px;
+}
+
+.admin_buttons {
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
 }
 
 .price {
@@ -46,7 +54,7 @@
 .dish_header_columns {
   display: flex;
   justify-content: space-between;
-  width: 5.3rem;
+  width: 7rem;
   font-family: "MulishBold";
   justify-items: center;
 }
@@ -57,30 +65,30 @@
 
 .price_columns {
   display: grid;
-  grid-template-columns: 50px 50px;
+  grid-template-columns: 90px 50px;
   justify-items: center;
   font-family: "MulishBold";
 }
 
-.price_columns2{
+.price_columns2 {
   display: grid;
-  grid-template-columns: 80px 0px;
+  grid-template-columns: 110px 0px;
   justify-items: end;
   font-family: "MulishBold";
 }
 
-.price_columns2 p{
- padding-right: 8px;
+.price_columns2 p {
+  padding-right: 8px;
 }
 
 @media (max-width: 1100px) {
   .dish_header_columns {
-    font-size: 2.3vh;
-    width: 5.2rem;
+    font-size: 2.2vh;
+    width: 6.5rem;
   }
 
   .dish_header_columns2 {
-    font-size: 2.3vh;
+    font-size: 2.2vh;
   }
 }
 
@@ -93,7 +101,7 @@
     padding-right: 0px;
   }
 
-  .price_columns2 {
-    grid-template-columns: 80px 0px;
+  .dish_header_columns {
+    width: 6.5rem;
   }
 }

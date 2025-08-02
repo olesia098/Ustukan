@@ -3,34 +3,32 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Ondine';
-  src: url('./assets/fonts/Ondine.ttf') format('truetype');
+  font-family: "Ondine";
+  src: url("./assets/fonts/Mulish-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Mulish';
-  src: url('./assets/fonts/Mulish-Bold.ttf') format('truetype');
+  font-family: "Mulish";
+  src: url("./assets/fonts/Mulish-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'MulishLight';
-  src: url('./assets/fonts/Mulish-Light.ttf') format('truetype');
+  font-family: "MulishLight";
+  src: url("./assets/fonts/Mulish-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'MulishBold';
-  src: url('./assets/fonts/Mulish-Bold.ttf') format('truetype');
+  font-family: "MulishBold";
+  src: url("./assets/fonts/Mulish-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
-
 
 body {
   margin: 0;
@@ -43,9 +41,8 @@ body {
   /* color: rgb(82, 30, 6); */
 }
 
-.conteiner{
+.conteiner {
   padding-top: 1vh;
   padding-left: 3vh;
   padding-right: 3vh;
 }
-
